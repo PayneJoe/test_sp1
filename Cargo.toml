@@ -7,7 +7,7 @@ repository = "https://github.com/PayneJoe/test_sp1.git"
 [workspace]
 resolver = "3"
 
-members = ["test_program"]
+members = ["test_program", "test_program_script"]
 
 [workspace.dependencies]
 bitcoincore-rpc = "0.19.0"
