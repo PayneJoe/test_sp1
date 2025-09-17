@@ -84,21 +84,37 @@ mod tests {
                 sp1_proof.bytes()[4..260].to_vec(),
             )
         };
-        let compressed_groth16_proof = compress_groth16_proof_from_bytes(&raw_snark_proof).unwrap();
-        let result = Groth16Verifier::verify_compressed_gnark_proof(
-            &compressed_groth16_proof[..128],
-            &[vk_pegout_hash, hash_public_inputs(&sp1_public_inputs)],
-            &UNTWEAKED_GNARK_GROTH16_VK_BYTES,
-        );
-        if result.is_err() {
-            println!("verify_compressed_gnark_proof failed: {:?}", result.err());
-        } else {
-            println!("verify_compressed_gnark_proof success");
+
+        {
+            let compressed_groth16_proof =
+                compress_groth16_proof_from_bytes(&raw_snark_proof).unwrap();
+            let result = Groth16Verifier::verify_compressed_gnark_proof(
+                &compressed_groth16_proof[..128],
+                &[vk_pegout_hash, hash_public_inputs(&sp1_public_inputs)],
+                &UNTWEAKED_GNARK_GROTH16_VK_BYTES,
+            );
+            if result.is_err() {
+                println!("verify_compressed_gnark_proof failed: {:?}", result.err());
+            } else {
+                println!("verify_compressed_gnark_proof success");
+            }
+            println!(
+                "Compressed groth16 proof: {:?}",
+                compressed_groth16_proof[..128].to_vec()
+            );
         }
 
-        println!(
-            "Compressed groth16 proof: {:?}",
-            compressed_groth16_proof[..128].to_vec()
-        );
+        {
+            let result = Groth16Verifier::verify_gnark_proof(
+                &raw_snark_proof,
+                &[vk_pegout_hash, hash_public_inputs(&sp1_public_inputs)],
+                &UNTWEAKED_GNARK_GROTH16_VK_BYTES,
+            );
+            if result.is_err() {
+                println!("verify_gnark_proof failed: {:?}", result);
+            } else {
+                println!("verify_gnark_proof success");
+            }
+        }
     }
 }
