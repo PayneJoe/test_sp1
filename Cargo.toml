@@ -7,23 +7,40 @@ repository = "https://github.com/PayneJoe/test_sp1.git"
 [workspace]
 resolver = "3"
 
-members = ["test_program", "test_program_script"]
+members = [
+    "crates/programs/pegout_test_program",
+    "crates/programs/pegout_test_program_script",
+    "crates/program_core",
+]
 
 [workspace.dependencies]
-bitcoincore-rpc = "0.19.0"
-bitcoincore-rpc-json = "0.19.0"
-bdk_bitcoind_rpc = "0.20.0"
-bdk_chain = "0.23.0"
-bdk_wallet = "2.0.0"
-bincode = "2.0.1"
-bitcoin = { version = "0.32.6", default-features = false }
-sp1-build = "5.2.0"
-sp1-core-executor = "5.2.0"
-sp1-derive = "5.2.0"
-sp1-helper = "5.2.0"
-sp1-prover = "5.2.0"
-sp1-recursion-core = "5.2.0"
-sp1-sdk = "5.2.0"
-sp1-stark = "5.2.0"
-sp1-verifier = "5.2.0"
-sp1-zkvm = "5.2.0"
+sp1-build = { git = "https://github.com/PayneJoe/sp1.git", branch = "dev" }
+sp1-core-executor = { git = "https://github.com/PayneJoe/sp1.git", branch = "dev" }
+sp1-derive = { git = "https://github.com/PayneJoe/sp1.git", branch = "dev" }
+sp1-helper = { git = "https://github.com/PayneJoe/sp1.git", branch = "dev" }
+sp1-prover = { git = "https://github.com/PayneJoe/sp1.git", branch = "dev" }
+sp1-recursion-core = { git = "https://github.com/PayneJoe/sp1.git", branch = "dev" }
+sp1-sdk = { git = "https://github.com/PayneJoe/sp1.git", branch = "dev" }
+sp1-stark = { git = "https://github.com/PayneJoe/sp1.git", branch = "dev" }
+sp1-verifier = { git = "https://github.com/PayneJoe/sp1.git", branch = "dev" }
+sp1-zkvm = { git = "https://github.com/PayneJoe/sp1.git", branch = "dev" }
+
+# sp1-build = "5.2.0"
+# sp1-core-executor = "5.2.0"
+# sp1-derive = "5.2.0"
+# sp1-helper = "5.2.0"
+# sp1-prover = "5.2.0"
+# sp1-recursion-core = "5.2.0"
+# sp1-sdk = "5.2.0"
+# sp1-stark = "5.2.0"
+# sp1-verifier = "5.2.0"
+# sp1-zkvm = "5.2.0"
+# sha2 = { git = "https://github.com/sp1-patches/RustCrypto-hashes", branch = "patch-v0.10.8" }
+thiserror = "2.0"
+serde = { version = "1.0.197", default-features = false }
+vault-prover-program-core = { path = "./crates/program_core" }
+sha2 = "0.10.8"
+
+[patch.crates-io]
+# secp256k1 = { git = "https://github.com/sp1-patches/rust-secp256k1", tag = "patch-0.29.1-sp1-5.0.0" }
+# sha2 = { git = "https://github.com/sp1-patches/RustCrypto-hashes", branch = "patch-v0.10.8" }
