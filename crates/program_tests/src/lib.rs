@@ -1,7 +1,10 @@
 #[cfg(test)]
 mod tests {
     use sp1_sdk::{HashableKey, ProverClient, SP1ProofWithPublicValues, SP1Stdin};
+    use sp1_verifier::Groth16Verifier;
     use sp1_verifier::compress_groth16_proof_from_bytes;
+    use sp1_verifier::hash_public_inputs;
+    use vault_prover_program_core::UNTWEAKED_GNARK_GROTH16_VK_BYTES;
     use vault_prover_program_core::{CLAIMER_PUBKEY, PegoutTestProofInput};
     use vault_prover_programs::PEGOUT_TEST_PROGRAM_ELF;
 
@@ -73,7 +76,7 @@ mod tests {
             workspace_dir.to_str().unwrap()
         );
         let sp1_proof = SP1ProofWithPublicValues::load(groth16_proof_file).unwrap();
-        let (vk_pegout_hash, public_inputs, raw_snark_proof) = {
+        let (vk_pegout_hash, sp1_public_inputs, raw_snark_proof) = {
             (
                 pegout_vk.bytes32().as_bytes().to_vec(),
                 sp1_proof.public_values.to_vec(),
@@ -81,6 +84,23 @@ mod tests {
             )
         };
         let compressed_groth16_proof = compress_groth16_proof_from_bytes(&raw_snark_proof).unwrap();
-        println!("compressed proof: {:?}", compressed_proof);
+        let result = Groth16Verifier::verify_compressed_gnark_proof(
+            &compressed_groth16_proof[..128],
+            &[
+                vk_pegout_hash.try_into().unwrap(),
+                hash_public_inputs(&sp1_public_inputs),
+            ],
+            &UNTWEAKED_GNARK_GROTH16_VK_BYTES,
+        );
+        if result.is_err() {
+            println!("verify_compressed_gnark_proof failed: {:?}", result.err());
+        } else {
+            println!("verify_compressed_gnark_proof success");
+        }
+
+        println!(
+            "Compressed groth16 proof: {:?}",
+            compressed_groth16_proof[..128].to_vec()
+        );
     }
 }
