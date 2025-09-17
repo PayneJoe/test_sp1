@@ -1,0 +1,1 @@
+pub use pegout_test_program_script::PEGOUT_TEST_PROGRAM_ELF;
