@@ -5498,7 +5498,7 @@ dependencies = [
 [[package]]
 name = "sp1-build"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "anyhow",
  "cargo_metadata",
@@ -5511,7 +5511,7 @@ dependencies = [
 [[package]]
 name = "sp1-core-executor"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "bincode",
  "bytemuck",
@@ -5549,7 +5549,7 @@ dependencies = [
 [[package]]
 name = "sp1-core-machine"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "bincode",
  "cbindgen",
@@ -5604,7 +5604,7 @@ dependencies = [
 [[package]]
 name = "sp1-cuda"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "bincode",
  "ctrlc",
@@ -5620,7 +5620,7 @@ dependencies = [
 [[package]]
 name = "sp1-curves"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "cfg-if",
  "dashu",
@@ -5641,7 +5641,7 @@ dependencies = [
 [[package]]
 name = "sp1-derive"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "quote",
  "syn 1.0.109",
@@ -5662,7 +5662,7 @@ dependencies = [
 [[package]]
 name = "sp1-lib"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "bincode",
  "serde",
@@ -5692,7 +5692,7 @@ dependencies = [
 [[package]]
 name = "sp1-primitives"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "bincode",
  "blake3",
@@ -5711,7 +5711,7 @@ dependencies = [
 [[package]]
 name = "sp1-prover"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "anyhow",
  "bincode",
@@ -5755,7 +5755,7 @@ dependencies = [
 [[package]]
 name = "sp1-recursion-circuit"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "hashbrown 0.14.5",
  "itertools 0.13.0",
@@ -5789,7 +5789,7 @@ dependencies = [
 [[package]]
 name = "sp1-recursion-compiler"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "backtrace",
  "itertools 0.13.0",
@@ -5810,7 +5810,7 @@ dependencies = [
 [[package]]
 name = "sp1-recursion-core"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "backtrace",
  "cbindgen",
@@ -5852,7 +5852,7 @@ dependencies = [
 [[package]]
 name = "sp1-recursion-derive"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "quote",
  "syn 1.0.109",
@@ -5861,7 +5861,7 @@ dependencies = [
 [[package]]
 name = "sp1-recursion-gnark-ffi"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "anyhow",
  "bincode",
@@ -5886,7 +5886,7 @@ dependencies = [
 [[package]]
 name = "sp1-sdk"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "alloy-primitives",
  "alloy-signer",
@@ -5938,7 +5938,7 @@ dependencies = [
 [[package]]
 name = "sp1-stark"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "arrayref",
  "hashbrown 0.14.5",
@@ -5972,7 +5972,7 @@ dependencies = [
 [[package]]
 name = "sp1-verifier"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "ark-bn254",
  "ark-ec",
@@ -5991,7 +5991,7 @@ dependencies = [
 [[package]]
 name = "sp1-zkvm"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#8619a65a944c11ab57d33f62bf0a32c8d1c55b30"
+source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#a4e12d612b5e39e59a5dadcc589ce33b066c2309"
 dependencies = [
  "cfg-if",
  "getrandom 0.2.16",
