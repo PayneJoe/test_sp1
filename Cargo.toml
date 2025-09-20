@@ -8,6 +8,7 @@ repository = "https://github.com/PayneJoe/test_sp1.git"
 resolver = "3"
 
 members = ["./crates/host", "./crates/guest"]
+# exclude = ["./crates/guest/target"]
 
 [workspace.dependencies]
 bitcoin = { version = "0.32.7", default-features = false }
