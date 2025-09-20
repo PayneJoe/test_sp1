@@ -1,5 +1,6 @@
 [package]
-name = "pegout_test_program_script"
+name = "vault-prover-host"
+description = "test for SP1 zkVM programs"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
@@ -7,6 +8,5 @@ repository.workspace = true
 
 [dependencies]
 sp1-sdk = { workspace = true }
-
-[build-dependencies]
-sp1-build = { workspace = true }
+sp1-verifier = { workspace = true }
+vault-prover-guest = { path = "../guest" }

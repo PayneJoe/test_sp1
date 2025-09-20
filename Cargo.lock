@@ -534,73 +534,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a23eb6b1614318a8071c9b2521f36b424b2c83db5eb3a0fead4a6c0809af6e61"
 
 [[package]]
-name = "ark-bn254"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d69eab57e8d2663efa5c63135b2af4f396d66424f88954c21104125ab6b3e6bc"
-dependencies = [
- "ark-ec",
- "ark-ff 0.5.0",
- "ark-std 0.5.0",
-]
-
-[[package]]
-name = "ark-crypto-primitives"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1e0c292754729c8a190e50414fd1a37093c786c709899f29c9f7daccecfa855e"
-dependencies = [
- "ahash",
- "ark-crypto-primitives-macros",
- "ark-ec",
- "ark-ff 0.5.0",
- "ark-relations",
- "ark-serialize 0.5.0",
- "ark-snark",
- "ark-std 0.5.0",
- "blake2",
- "derivative",
- "digest 0.10.7",
- "fnv",
- "merlin",
- "rayon",
- "sha2",
-]
-
-[[package]]
-name = "ark-crypto-primitives-macros"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e7e89fe77d1f0f4fe5b96dfc940923d88d17b6a773808124f21e764dfb063c6a"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.106",
-]
-
-[[package]]
-name = "ark-ec"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "43d68f2d516162846c1238e755a7c4d131b892b70cc70c471a8e3ca3ed818fce"
-dependencies = [
- "ahash",
- "ark-ff 0.5.0",
- "ark-poly",
- "ark-serialize 0.5.0",
- "ark-std 0.5.0",
- "educe",
- "fnv",
- "hashbrown 0.15.5",
- "itertools 0.13.0",
- "num-bigint 0.4.6",
- "num-integer",
- "num-traits",
- "rayon",
- "zeroize",
-]
-
-[[package]]
 name = "ark-ff"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -639,27 +572,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "ark-ff"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a177aba0ed1e0fbb62aa9f6d0502e9b46dad8c2eab04c14258a1212d2557ea70"
-dependencies = [
- "ark-ff-asm 0.5.0",
- "ark-ff-macros 0.5.0",
- "ark-serialize 0.5.0",
- "ark-std 0.5.0",
- "arrayvec",
- "digest 0.10.7",
- "educe",
- "itertools 0.13.0",
- "num-bigint 0.4.6",
- "num-traits",
- "paste",
- "rayon",
- "zeroize",
-]
-
-[[package]]
 name = "ark-ff-asm"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -677,16 +589,6 @@ checksum = "3ed4aa4fe255d0bc6d79373f7e31d2ea147bcf486cba1be5ba7ea85abdb92348"
 dependencies = [
  "quote",
  "syn 1.0.109",
-]
-
-[[package]]
-name = "ark-ff-asm"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "62945a2f7e6de02a31fe400aa489f0e0f5b2502e69f95f853adb82a96c7a6b60"
-dependencies = [
- "quote",
- "syn 2.0.106",
 ]
 
 [[package]]
@@ -715,63 +617,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "ark-ff-macros"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "09be120733ee33f7693ceaa202ca41accd5653b779563608f1234f78ae07c4b3"
-dependencies = [
- "num-bigint 0.4.6",
- "num-traits",
- "proc-macro2",
- "quote",
- "syn 2.0.106",
-]
-
-[[package]]
-name = "ark-groth16"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "88f1d0f3a534bb54188b8dcc104307db6c56cdae574ddc3212aec0625740fc7e"
-dependencies = [
- "ark-crypto-primitives",
- "ark-ec",
- "ark-ff 0.5.0",
- "ark-poly",
- "ark-relations",
- "ark-serialize 0.5.0",
- "ark-std 0.5.0",
- "rayon",
-]
-
-[[package]]
-name = "ark-poly"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "579305839da207f02b89cd1679e50e67b4331e2f9294a57693e5051b7703fe27"
-dependencies = [
- "ahash",
- "ark-ff 0.5.0",
- "ark-serialize 0.5.0",
- "ark-std 0.5.0",
- "educe",
- "fnv",
- "hashbrown 0.15.5",
- "rayon",
-]
-
-[[package]]
-name = "ark-relations"
-version = "0.5.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ec46ddc93e7af44bcab5230937635b06fb5744464dd6a7e7b083e80ebd274384"
-dependencies = [
- "ark-ff 0.5.0",
- "ark-std 0.5.0",
- "tracing",
- "tracing-subscriber 0.2.25",
-]
-
-[[package]]
 name = "ark-serialize"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -793,43 +638,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "ark-serialize"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3f4d068aaf107ebcd7dfb52bc748f8030e0fc930ac8e360146ca54c1203088f7"
-dependencies = [
- "ark-serialize-derive",
- "ark-std 0.5.0",
- "arrayvec",
- "digest 0.10.7",
- "num-bigint 0.4.6",
- "rayon",
-]
-
-[[package]]
-name = "ark-serialize-derive"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "213888f660fddcca0d257e88e54ac05bca01885f258ccdf695bafd77031bb69d"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.106",
-]
-
-[[package]]
-name = "ark-snark"
-version = "0.5.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d368e2848c2d4c129ce7679a7d0d2d612b6a274d3ea6a13bad4445d61b381b88"
-dependencies = [
- "ark-ff 0.5.0",
- "ark-relations",
- "ark-serialize 0.5.0",
- "ark-std 0.5.0",
-]
-
-[[package]]
 name = "ark-std"
 version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -847,17 +655,6 @@ checksum = "94893f1e0c6eeab764ade8dc4c0db24caf4fe7cbbaafc0eba0a9030f447b5185"
 dependencies = [
  "num-traits",
  "rand 0.8.5",
-]
-
-[[package]]
-name = "ark-std"
-version = "0.5.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "246a225cc6131e9ee4f24619af0f19d67761fff15d7ccc22e42b80846e69449a"
-dependencies = [
- "num-traits",
- "rand 0.8.5",
- "rayon",
 ]
 
 [[package]]
@@ -2302,18 +2099,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "educe"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1d7bc049e1bd8cdeb31b68bbd586a9464ecf9f3944af3958a7a9d0f8b9799417"
-dependencies = [
- "enum-ordinalize",
- "proc-macro2",
- "quote",
- "syn 2.0.106",
-]
-
-[[package]]
 name = "either"
 version = "1.15.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2371,26 +2156,6 @@ name = "enum-map-derive"
 version = "0.17.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f282cfdfe92516eb26c2af8589c274c7c17681f5ecc03c18255fe741c6aa64eb"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn 2.0.106",
-]
-
-[[package]]
-name = "enum-ordinalize"
-version = "4.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fea0dcfa4e54eeb516fe454635a95753ddd39acda650ce703031c6973e315dd5"
-dependencies = [
- "enum-ordinalize-derive",
-]
-
-[[package]]
-name = "enum-ordinalize-derive"
-version = "4.3.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0d28318a75d4aead5c4db25382e8ef717932d0346600cacae6357eb5941bc5ff"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -3549,18 +3314,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3d97bbf43eb4f088f8ca469930cde17fa036207c9a5e02ccc5107c4e8b17c964"
 
 [[package]]
-name = "merlin"
-version = "3.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "58c38e2799fc0978b65dfff8023ec7843e2330bb462f19198840b34b6582397d"
-dependencies = [
- "byteorder",
- "keccak",
- "rand_core 0.6.4",
- "zeroize",
-]
-
-[[package]]
 name = "mime"
 version = "0.3.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -4195,25 +3948,6 @@ name = "pathdiff"
 version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "df94ce210e5bc13cb6651479fa48d14f601d9858cfe0467f43ae157023b938d3"
-
-[[package]]
-name = "pegout_test_program"
-version = "0.1.0"
-dependencies = [
- "sha2",
- "sp1-verifier",
- "sp1-zkvm",
- "thiserror 2.0.16",
- "vault-prover-program-core",
-]
-
-[[package]]
-name = "pegout_test_program_script"
-version = "0.1.0"
-dependencies = [
- "sp1-build",
- "sp1-sdk",
-]
 
 [[package]]
 name = "pem-rfc7468"
@@ -5469,7 +5203,7 @@ dependencies = [
 [[package]]
 name = "sp1-build"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
+source = "git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2#b63ee82a5ce26219f12a25afdec70a2b9fea62b2"
 dependencies = [
  "anyhow",
  "cargo_metadata",
@@ -5482,7 +5216,7 @@ dependencies = [
 [[package]]
 name = "sp1-core-executor"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
+source = "git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2#b63ee82a5ce26219f12a25afdec70a2b9fea62b2"
 dependencies = [
  "bincode",
  "bytemuck",
@@ -5505,7 +5239,7 @@ dependencies = [
  "serde",
  "serde_json",
  "sp1-curves",
- "sp1-primitives 5.2.1 (git+https://github.com/PayneJoe/sp1.git?branch=dev)",
+ "sp1-primitives 5.2.1 (git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2)",
  "sp1-stark",
  "strum",
  "strum_macros",
@@ -5520,7 +5254,7 @@ dependencies = [
 [[package]]
 name = "sp1-core-machine"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
+source = "git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2#b63ee82a5ce26219f12a25afdec70a2b9fea62b2"
 dependencies = [
  "bincode",
  "cbindgen",
@@ -5558,7 +5292,7 @@ dependencies = [
  "sp1-core-executor",
  "sp1-curves",
  "sp1-derive",
- "sp1-primitives 5.2.1 (git+https://github.com/PayneJoe/sp1.git?branch=dev)",
+ "sp1-primitives 5.2.1 (git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2)",
  "sp1-stark",
  "static_assertions",
  "strum",
@@ -5567,7 +5301,7 @@ dependencies = [
  "thiserror 1.0.69",
  "tracing",
  "tracing-forest",
- "tracing-subscriber 0.3.20",
+ "tracing-subscriber",
  "typenum",
  "web-time",
 ]
@@ -5575,7 +5309,7 @@ dependencies = [
 [[package]]
 name = "sp1-cuda"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
+source = "git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2#b63ee82a5ce26219f12a25afdec70a2b9fea62b2"
 dependencies = [
  "bincode",
  "ctrlc",
@@ -5591,7 +5325,7 @@ dependencies = [
 [[package]]
 name = "sp1-curves"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
+source = "git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2#b63ee82a5ce26219f12a25afdec70a2b9fea62b2"
 dependencies = [
  "cfg-if",
  "dashu",
@@ -5604,7 +5338,7 @@ dependencies = [
  "p3-field",
  "serde",
  "snowbridge-amcl",
- "sp1-primitives 5.2.1 (git+https://github.com/PayneJoe/sp1.git?branch=dev)",
+ "sp1-primitives 5.2.1 (git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2)",
  "sp1-stark",
  "typenum",
 ]
@@ -5612,7 +5346,7 @@ dependencies = [
 [[package]]
 name = "sp1-derive"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
+source = "git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2#b63ee82a5ce26219f12a25afdec70a2b9fea62b2"
 dependencies = [
  "quote",
  "syn 1.0.109",
@@ -5628,16 +5362,6 @@ dependencies = [
  "elliptic-curve",
  "serde",
  "sp1-primitives 5.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
-]
-
-[[package]]
-name = "sp1-lib"
-version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
-dependencies = [
- "bincode",
- "serde",
- "sp1-primitives 5.2.1 (git+https://github.com/PayneJoe/sp1.git?branch=dev)",
 ]
 
 [[package]]
@@ -5663,7 +5387,7 @@ dependencies = [
 [[package]]
 name = "sp1-primitives"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
+source = "git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2#b63ee82a5ce26219f12a25afdec70a2b9fea62b2"
 dependencies = [
  "bincode",
  "blake3",
@@ -5682,7 +5406,7 @@ dependencies = [
 [[package]]
 name = "sp1-prover"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
+source = "git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2#b63ee82a5ce26219f12a25afdec70a2b9fea62b2"
 dependencies = [
  "anyhow",
  "bincode",
@@ -5711,7 +5435,7 @@ dependencies = [
  "sha2",
  "sp1-core-executor",
  "sp1-core-machine",
- "sp1-primitives 5.2.1 (git+https://github.com/PayneJoe/sp1.git?branch=dev)",
+ "sp1-primitives 5.2.1 (git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2)",
  "sp1-recursion-circuit",
  "sp1-recursion-compiler",
  "sp1-recursion-core",
@@ -5720,13 +5444,13 @@ dependencies = [
  "thiserror 1.0.69",
  "tracing",
  "tracing-appender",
- "tracing-subscriber 0.3.20",
+ "tracing-subscriber",
 ]
 
 [[package]]
 name = "sp1-recursion-circuit"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
+source = "git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2#b63ee82a5ce26219f12a25afdec70a2b9fea62b2"
 dependencies = [
  "hashbrown 0.14.5",
  "itertools 0.13.0",
@@ -5749,7 +5473,7 @@ dependencies = [
  "sp1-core-executor",
  "sp1-core-machine",
  "sp1-derive",
- "sp1-primitives 5.2.1 (git+https://github.com/PayneJoe/sp1.git?branch=dev)",
+ "sp1-primitives 5.2.1 (git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2)",
  "sp1-recursion-compiler",
  "sp1-recursion-core",
  "sp1-recursion-gnark-ffi",
@@ -5760,7 +5484,7 @@ dependencies = [
 [[package]]
 name = "sp1-recursion-compiler"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
+source = "git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2#b63ee82a5ce26219f12a25afdec70a2b9fea62b2"
 dependencies = [
  "backtrace",
  "itertools 0.13.0",
@@ -5770,7 +5494,7 @@ dependencies = [
  "p3-symmetric",
  "serde",
  "sp1-core-machine",
- "sp1-primitives 5.2.1 (git+https://github.com/PayneJoe/sp1.git?branch=dev)",
+ "sp1-primitives 5.2.1 (git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2)",
  "sp1-recursion-core",
  "sp1-recursion-derive",
  "sp1-stark",
@@ -5781,7 +5505,7 @@ dependencies = [
 [[package]]
 name = "sp1-recursion-core"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
+source = "git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2#b63ee82a5ce26219f12a25afdec70a2b9fea62b2"
 dependencies = [
  "backtrace",
  "cbindgen",
@@ -5811,7 +5535,7 @@ dependencies = [
  "serde",
  "sp1-core-machine",
  "sp1-derive",
- "sp1-primitives 5.2.1 (git+https://github.com/PayneJoe/sp1.git?branch=dev)",
+ "sp1-primitives 5.2.1 (git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2)",
  "sp1-stark",
  "static_assertions",
  "thiserror 1.0.69",
@@ -5823,7 +5547,7 @@ dependencies = [
 [[package]]
 name = "sp1-recursion-derive"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
+source = "git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2#b63ee82a5ce26219f12a25afdec70a2b9fea62b2"
 dependencies = [
  "quote",
  "syn 1.0.109",
@@ -5832,7 +5556,7 @@ dependencies = [
 [[package]]
 name = "sp1-recursion-gnark-ffi"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
+source = "git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2#b63ee82a5ce26219f12a25afdec70a2b9fea62b2"
 dependencies = [
  "anyhow",
  "bincode",
@@ -5857,7 +5581,7 @@ dependencies = [
 [[package]]
 name = "sp1-sdk"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
+source = "git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2#b63ee82a5ce26219f12a25afdec70a2b9fea62b2"
 dependencies = [
  "alloy-primitives",
  "alloy-signer",
@@ -5892,7 +5616,7 @@ dependencies = [
  "sp1-core-executor",
  "sp1-core-machine",
  "sp1-cuda",
- "sp1-primitives 5.2.1 (git+https://github.com/PayneJoe/sp1.git?branch=dev)",
+ "sp1-primitives 5.2.1 (git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2)",
  "sp1-prover",
  "sp1-stark",
  "strum",
@@ -5909,7 +5633,7 @@ dependencies = [
 [[package]]
 name = "sp1-stark"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
+source = "git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2#b63ee82a5ce26219f12a25afdec70a2b9fea62b2"
 dependencies = [
  "arrayref",
  "hashbrown 0.14.5",
@@ -5933,7 +5657,7 @@ dependencies = [
  "rayon-scan",
  "serde",
  "sp1-derive",
- "sp1-primitives 5.2.1 (git+https://github.com/PayneJoe/sp1.git?branch=dev)",
+ "sp1-primitives 5.2.1 (git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2)",
  "strum",
  "strum_macros",
  "sysinfo",
@@ -5943,13 +5667,8 @@ dependencies = [
 [[package]]
 name = "sp1-verifier"
 version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
+source = "git+https://github.com/succinctlabs/sp1.git?rev=b63ee82a5ce26219f12a25afdec70a2b9fea62b2#b63ee82a5ce26219f12a25afdec70a2b9fea62b2"
 dependencies = [
- "ark-bn254",
- "ark-ec",
- "ark-ff 0.5.0",
- "ark-groth16",
- "ark-serialize 0.5.0",
  "blake3",
  "cfg-if",
  "hex",
@@ -5957,24 +5676,6 @@ dependencies = [
  "sha2",
  "substrate-bn-succinct",
  "thiserror 2.0.16",
-]
-
-[[package]]
-name = "sp1-zkvm"
-version = "5.2.1"
-source = "git+https://github.com/PayneJoe/sp1.git?branch=dev#380fff0c45617deb5046da54aecf2c08bded0e4c"
-dependencies = [
- "cfg-if",
- "getrandom 0.2.16",
- "getrandom 0.3.3",
- "lazy_static",
- "libm",
- "p3-baby-bear",
- "p3-field",
- "rand 0.8.5",
- "sha2",
- "sp1-lib 5.2.1 (git+https://github.com/PayneJoe/sp1.git?branch=dev)",
- "sp1-primitives 5.2.1 (git+https://github.com/PayneJoe/sp1.git?branch=dev)",
 ]
 
 [[package]]
@@ -6059,7 +5760,7 @@ dependencies = [
  "num-bigint 0.4.6",
  "rand 0.8.5",
  "rustc-hex",
- "sp1-lib 5.2.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "sp1-lib",
 ]
 
 [[package]]
@@ -6556,7 +6257,7 @@ dependencies = [
  "crossbeam-channel",
  "thiserror 1.0.69",
  "time",
- "tracing-subscriber 0.3.20",
+ "tracing-subscriber",
 ]
 
 [[package]]
@@ -6590,7 +6291,7 @@ dependencies = [
  "smallvec",
  "thiserror 1.0.69",
  "tracing",
- "tracing-subscriber 0.3.20",
+ "tracing-subscriber",
 ]
 
 [[package]]
@@ -6601,15 +6302,6 @@ checksum = "ee855f1f400bd0e5c02d150ae5de3840039a3f54b025156404e34c23c03f47c3"
 dependencies = [
  "log",
  "once_cell",
- "tracing-core",
-]
-
-[[package]]
-name = "tracing-subscriber"
-version = "0.2.25"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0e0d2eaa99c3c2e41547cfa109e910a68ea03823cccad4a0525dcbc9b01e8c71"
-dependencies = [
  "tracing-core",
 ]
 
@@ -6760,31 +6452,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ba73ea9cf16a25df0c8caa16c51acb937d5712a8429db78a3ee29d5dcacd3a65"
 
 [[package]]
-name = "vault-prover-program-core"
+name = "vault-prover-guest"
 version = "0.1.0"
 dependencies = [
- "serde",
+ "sp1-build",
 ]
 
 [[package]]
-name = "vault-prover-program-tests"
+name = "vault-prover-host"
 version = "0.1.0"
 dependencies = [
- "serde",
- "sp1-core-executor",
- "sp1-prover",
  "sp1-sdk",
- "sp1-stark",
  "sp1-verifier",
- "vault-prover-program-core",
- "vault-prover-programs",
-]
-
-[[package]]
-name = "vault-prover-programs"
-version = "0.1.0"
-dependencies = [
- "pegout_test_program_script",
+ "vault-prover-guest",
 ]
 
 [[package]]

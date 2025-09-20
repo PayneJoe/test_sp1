@@ -1,0 +1,22 @@
+[workspace]
+[package]
+name = "vault-prover-guest"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "vault_dispute"
+path = "src/vault_dispute.rs"
+
+[[bin]]
+name = "vault_pegout"
+path = "src/vault_pegout.rs"
+
+[dependencies]
+sp1-zkvm = "5.2.1"
+sp1-verifier = "5.2.1"
+bitcoin = { version = "0.32.7", default-features = false }
+secp256k1 = { git = "https://github.com/sp1-patches/rust-secp256k1", tag = "patch-0.29.1-sp1-5.0.0" }
+
+[patch.crates-io]
+secp256k1 = { git = "https://github.com/sp1-patches/rust-secp256k1", tag = "patch-0.29.1-sp1-5.0.0" }
