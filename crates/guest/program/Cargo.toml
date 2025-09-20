@@ -5,8 +5,12 @@ version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "vault_prover_dispute"
-path = "src/vault_prover_dispute.rs"
+name = "vault_dispute"
+path = "src/vault_dispute.rs"
+
+[[bin]]
+name = "vault_pegout"
+path = "src/vault_pegout.rs"
 
 [dependencies]
 sp1-zkvm = "5.2.1"
