@@ -1,0 +1,12 @@
+[package]
+name = "vault-prover-program-core"
+description = "Primitives and types for vault program"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+serde = { workspace = true }
+bitcoin = { workspace = true, features = ["serde"], default-features = false }
+bitcoin-scriptexec = { workspace = true }

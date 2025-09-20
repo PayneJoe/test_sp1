@@ -1,0 +1,26 @@
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/PayneJoe/test_sp1.git"
+
+[workspace]
+resolver = "3"
+
+members = ["./crates/tests", "./crates/primitives"]
+test-sp1-primitives = { path = "./crates/primitives" }
+
+[workspace.dependencies]
+bitcoin = { version = "0.32.7", default-features = false }
+serde = { version = "1.0", features = ["derive"] }
+bitcoin-scriptexec = { git = "https://github.com/BitVM/rust-bitcoin-scriptexec" }
+bitcoin-script = { git = "https://github.com/BitVM/rust-bitcoin-script" }
+sp1-sdk = { git = "https://github.com/succinctlabs/sp1.git", rev = "b63ee82a5ce26219f12a25afdec70a2b9fea62b2" }
+sp1-verifier = { git = "https://github.com/succinctlabs/sp1.git", rev = "b63ee82a5ce26219f12a25afdec70a2b9fea62b2" }
+
+[profile.dev]
+opt-level = 3
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
