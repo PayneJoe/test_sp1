@@ -9,7 +9,6 @@ fn main() -> Result<()> {
             ..Default::default()
         },
     );
-    println!("------------------------------------");
 
     Ok(())
 }
