@@ -8,7 +8,6 @@ repository = "https://github.com/PayneJoe/test_sp1.git"
 resolver = "3"
 
 members = ["./crates/host", "./crates/guest"]
-# exclude = ["./crates/guest/target"]
 
 [workspace.dependencies]
 bitcoin = { version = "0.32.7", default-features = false }
@@ -18,7 +17,7 @@ bitcoin-script = { git = "https://github.com/BitVM/rust-bitcoin-script" }
 sp1-sdk = { git = "https://github.com/succinctlabs/sp1.git", rev = "b63ee82a5ce26219f12a25afdec70a2b9fea62b2" }
 sp1-verifier = { git = "https://github.com/succinctlabs/sp1.git", rev = "b63ee82a5ce26219f12a25afdec70a2b9fea62b2" }
 sp1-build = { git = "https://github.com/succinctlabs/sp1.git", rev = "b63ee82a5ce26219f12a25afdec70a2b9fea62b2" }
-# vault-prover-guest = { path = "./crates/guest" }
+vault-prover-guest = { path = "./crates/guest" }
 
 [profile.dev]
 opt-level = 3
