@@ -1,0 +1,12 @@
+[package]
+name = "vault-prover-guest"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+sp1-build = { workspace = true }
+
+[build-dependencies]
+sp1-build = { workspace = true }
